@@ -1,12 +1,18 @@
-import FindPairsForm from './client/FindPairsForm'
+import SheetForm from "components/home/sheet-form";
+
 
 export default function Page() {
+  
   return (
-    <section className='h-screen flex items-center justify-center'>
-      <div className='bg-black/80 w-96 px-6 py-4 rounded-md shadow-lg pb-7 text-center'>
-        <h3 className='text-2xl font-semibold text-white/90'>Test case</h3>
+    <section className='min-h-screen flex items-start'>
+      <div className='w-80 bg-black m-3 py-5 px-4 rounded-md shadow-sm'>
+        <h1 className='font-semibold text-2xl'>Sheet data previewer</h1>
 
-        <FindPairsForm />
+        <SheetForm/>
+
+      </div>
+      <div className='bg-red-100 flex-1 min-h-screen'>
+       
       </div>
     </section>
   )
