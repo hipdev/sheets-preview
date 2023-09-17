@@ -24,18 +24,13 @@ export default function SheetForm() {
 
     Papa.parse(file, {
       complete: (result) => {
-        // At this point, we should validate or sanitize the parsed result
-        console.log('Parsed Result:', result)
         setCSVData(result.data as DynamicData[])
       },
       header: true,
-      dynamicTyping: true, // This will attempt to convert strings to numbers or booleans if possible
+      dynamicTyping: true,
     })
   }
-  console.log(
-    csvData.map((item) => item.id),
-    'data',
-  )
+
   return (
     <form className='my-5' onSubmit={handleSubmit}>
       <label className='space-y-1 cursor-pointer'>
@@ -50,7 +45,7 @@ export default function SheetForm() {
       <button
         disabled={!file}
         className={clsx(
-          'w-full transition-colors text-black py-2 rounded-md mt-4',
+          'w-full transition-colors text-black py-2 rounded-md mt-7',
           !file ? 'bg-white/50' : 'bg-white',
         )}
       >
