@@ -1,6 +1,7 @@
-# Next.js + Turbopack App Directory Playground
+# Next.js + TailwindCSS + Shadcn 
 
-## Find pairs test
+## Sheets previewer
+### Upload a sheet file, you will see it in a datatable  with sorting and filtering features.
 
 To reproduce
 
