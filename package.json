@@ -10,11 +10,16 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "clsx": "2.0.0",
+    "@tanstack/react-table": "^8.10.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "lucide-react": "^0.279.0",
     "next": "latest",
     "papaparse": "^5.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
