@@ -2,9 +2,9 @@ import './globals.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sheets challenge',
+  title: 'CSV data previewer',
   description:
-    'Sheets challenge with Next.js, Tailwind CSS, Jest and TypeScript',
+    'CSV data previewer with Next.js, Tailwind CSS, Jest and TypeScript',
   themeColor: 'black',
   colorScheme: 'dark',
 }

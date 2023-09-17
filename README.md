@@ -1,7 +1,7 @@
 # Next.js + TailwindCSS + Shadcn + Bun
 
-## Sheets previewer
-### Upload a sheet file, you will see it in a datatable  with sorting and filtering features.
+## CSV file previewer
+### Upload a .csv file, you will see it in a datatable  with sorting and filtering features.
 
 To reproduce
 

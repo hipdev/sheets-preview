@@ -34,12 +34,8 @@ export default function SheetForm() {
   return (
     <form className='my-5' onSubmit={handleSubmit}>
       <label className='space-y-1 cursor-pointer'>
-        <span className='text-sm font-semibold'>Select a sheet file</span>
-        <input
-          type='file'
-          onChange={handleFileChange}
-          accept='.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'
-        />
+        <span className='text-sm font-semibold'>Select a .csv file</span>
+        <input type='file' onChange={handleFileChange} accept='.csv' />
       </label>
 
       <button
