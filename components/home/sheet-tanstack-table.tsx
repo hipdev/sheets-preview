@@ -3,7 +3,6 @@
 import { rankItem } from '@tanstack/match-sorter-utils'
 import * as React from 'react'
 import {
-  ColumnDef,
   ColumnFiltersState,
   FilterFn,
   SortingState,
@@ -15,20 +14,15 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { ArrowUpDown, ChevronDown, MoreHorizontal } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 
 import { Button } from 'components/ui/button'
-import { Checkbox } from 'components/ui/checkbox'
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from 'components/ui/dropdown-menu'
-import { Input } from 'components/ui/input'
 import {
   Table,
   TableBody,
@@ -92,7 +86,7 @@ export function DataTableDemo({ columns, data }: any) {
         <DebouncedInput
           value={globalFilter ?? ''}
           onChange={(value) => setGlobalFilter(String(value))}
-          className='p-2 font-lg shadow border border-block'
+          className='py-2 px-4 text-white font-lg shadow border border-block rounded-md placeholder:text-white/80'
           placeholder='Search all columns...'
         />
         <DropdownMenu>
