@@ -2,9 +2,14 @@
 
 import clsx from "clsx";
 import { useState } from "react";
+import Papa from 'papaparse';
+import useSheetStore, { DynamicData } from "./sheet-store";
 
 export default function SheetForm() {
     const [file, setFile] = useState<File | null>(null);
+    const [isError, setIsError] = useState<boolean>(false);
+    const {setCSVData, csvData} = useSheetStore()
+
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const uploadedFile = event.target.files ? event.target.files[0] : null;
@@ -13,7 +18,22 @@ export default function SheetForm() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        if (!file) {
+            setIsError(true)
+            return
+        }
+
+        Papa.parse(file, {
+            complete: (result) => {
+              // At this point, we should validate or sanitize the parsed result
+              console.log('Parsed Result:', result);
+              setCSVData(result.data as DynamicData[]);
+            },
+            header: true,
+            dynamicTyping: true, // This will attempt to convert strings to numbers or booleans if possible
+          });
     }
+    console.log(csvData.map(item=> item.id), 'data')
     return (
       <form className="my-5" onSubmit={handleSubmit}>
         <label className="space-y-1 cursor-pointer">
