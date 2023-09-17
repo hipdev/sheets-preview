@@ -1,13 +1,16 @@
-# Next.js + TailwindCSS + Shadcn 
+# Next.js + TailwindCSS + Shadcn + Bun
 
 ## Sheets previewer
 ### Upload a sheet file, you will see it in a datatable  with sorting and filtering features.
 
 To reproduce
 
-1. Install dependencies: `pnpm install`
-1. Start the dev server: `pnpm dev`
 
-**Note:** The playground uses [Tailwind CSS](https://tailwindcss.com) via [PostCSS](https://turbo.build/pack/docs/features/css#postcss).
+1. Install bun: `curl -fsSL https://bun.sh/install | bash`
+1. Install all packages: `bun install`
+1. Start the dev server: `bun dev`
 
-### Preview url [here](https://find-pairs-test.vercel.app/)
+#### If on windows, just use pnpm, yarn, npm...
+
+
+### Preview url [here](https://sheets-preview.vercel.app/)
